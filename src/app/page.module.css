@@ -1,0 +1,1140 @@
+/* ==========================================================================
+   ROBOFORGE HERO SECTION - STYLES
+   Pure Black & Neon Cyan Aesthetic - 100% Code-driven Structure
+   ========================================================================== */
+
+/* ==========================================================================
+   SCROLL-DRIVEN CINEMATIC CANVAS ANIMATION
+   ========================================================================== */
+
+.scrollTrack {
+  position: relative;
+  width: 100%;
+  height: 400vh;
+  background-color: #000000;
+}
+
+/* Fullscreen Fixed Canvas: Pinned permanently to the viewport across the entire 400vh scroll */
+.scrollCanvas {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  pointer-events: none;
+  z-index: 0;
+  background-color: #000000;
+  display: block;
+}
+
+/* Deep Luxury Gold & Cinematic Vignette Seamless Blend */
+.cinematicOverlay {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+  background: 
+    radial-gradient(circle at 50% 50%, rgba(212, 168, 67, 0.04) 0%, rgba(0, 0, 0, 0.15) 55%, rgba(0, 0, 0, 0.75) 100%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.5) 0%, transparent 15%, transparent 80%, rgba(0, 0, 0, 0.85) 100%);
+}
+
+/* Fixed Hero Section Wrapper: Pinned over the canvas throughout the scroll */
+.heroWrapper {
+  position: fixed;
+  inset: 0;
+  width: 100%;
+  height: 100vh;
+  height: 100dvh;
+  background: transparent;
+  color: #ffffff;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  z-index: 2;
+  pointer-events: none;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.heroWrapper::-webkit-scrollbar {
+  display: none;
+}
+
+/* Background Ambient Lighting (No image files) */
+.ambientGlowRight {
+  position: absolute;
+  top: 10%;
+  right: -5%;
+  width: 65vw;
+  height: 65vw;
+  max-width: 900px;
+  max-height: 900px;
+  background: radial-gradient(circle, rgba(0, 180, 255, 0.16) 0%, rgba(0, 100, 255, 0.08) 40%, transparent 70%);
+  filter: blur(80px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+.ambientGlowLeft {
+  position: absolute;
+  top: 35%;
+  left: -10%;
+  width: 45vw;
+  height: 45vw;
+  background: radial-gradient(circle, rgba(0, 140, 255, 0.08) 0%, transparent 65%);
+  filter: blur(90px);
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Cyber Starfield / Subtle Grid Texture */
+.cyberGrid {
+  position: absolute;
+  inset: 0;
+  background-image:
+    radial-gradient(rgba(0, 220, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.02) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.02) 1px, transparent 1px);
+  background-size: 50px 50px, 120px 120px, 120px 120px;
+  mask-image: radial-gradient(ellipse at center, rgba(0, 0, 0, 1) 40%, rgba(0, 0, 0, 0) 85%);
+  opacity: 0.45;
+  pointer-events: none;
+  z-index: 1;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  height: 100%;
+  min-height: 100%;
+  max-width: 1540px;
+  margin: 0 auto;
+  padding: 0 clamp(1.2rem, 3vw, 2.5rem);
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  pointer-events: auto;
+}
+
+/* ==========================================================================
+   HEADER & NAVBAR
+   ========================================================================== */
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: clamp(0.75rem, 1.8vh, 1.4rem);
+  padding-bottom: clamp(0.75rem, 1.8vh, 1.4rem);
+  border-bottom: 1px solid rgba(0, 195, 255, 0.12);
+  position: relative;
+  z-index: 50;
+  flex-shrink: 0;
+}
+
+/* Logo Area */
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  text-decoration: none;
+}
+
+.logoIcon {
+  position: relative;
+  width: 42px;
+  height: 42px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.logoTextGroup {
+  display: flex;
+  flex-direction: column;
+}
+
+.logoBrand {
+  font-family: var(--font-display);
+  font-size: 1.35rem;
+  font-weight: 800;
+  letter-spacing: 0.22em;
+  color: #ffffff;
+  line-height: 1.1;
+  text-shadow: 0 0 15px rgba(255, 255, 255, 0.4);
+}
+
+.logoTagline {
+  font-family: var(--font-tech);
+  font-size: 0.72rem;
+  font-weight: 600;
+  letter-spacing: 0.38em;
+  color: #00d2ff;
+  line-height: 1.2;
+  margin-top: 2px;
+}
+
+/* Desktop Navigation */
+.navMenu {
+  display: flex;
+  align-items: center;
+  gap: 2.2rem;
+}
+
+.navLink {
+  font-family: var(--font-tech);
+  font-size: 0.95rem;
+  font-weight: 600;
+  letter-spacing: 0.12em;
+  color: #9ab4d0;
+  transition: all 0.25s ease;
+  position: relative;
+  padding: 0.4rem 0.6rem;
+}
+
+.navLink:hover {
+  color: #00f0ff;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.6);
+}
+
+.navLinkActive {
+  color: #ffffff;
+  background: rgba(0, 210, 255, 0.12);
+  border: 1px solid #00d2ff;
+  border-radius: 9999px;
+  padding: 0.35rem 1.2rem;
+  box-shadow: 0 0 15px rgba(0, 210, 255, 0.4), inset 0 0 10px rgba(0, 210, 255, 0.25);
+  text-shadow: 0 0 8px rgba(0, 240, 255, 0.8);
+}
+
+/* Header Action Button */
+.headerCta {
+  display: flex;
+  align-items: center;
+  gap: 0.8rem;
+  padding: 0.6rem 0.7rem 0.6rem 1.4rem;
+  background: rgba(0, 40, 90, 0.4);
+  border: 1px solid #00b4ff;
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: 0.92rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  box-shadow: 0 0 20px rgba(0, 160, 255, 0.35), inset 0 0 15px rgba(0, 140, 255, 0.2);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.headerCta:hover {
+  transform: translateY(-2px);
+  border-color: #00f0ff;
+  box-shadow: 0 0 28px rgba(0, 220, 255, 0.65), inset 0 0 20px rgba(0, 200, 255, 0.3);
+}
+
+.headerCtaCircle {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #002b66;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+  transition: transform 0.25s ease;
+}
+
+.headerCta:hover .headerCtaCircle {
+  transform: translateX(3px);
+}
+
+/* Mobile Hamburger */
+.hamburgerBtn {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 38px;
+  height: 38px;
+  background: rgba(0, 20, 45, 0.6);
+  border: 1px solid rgba(0, 220, 255, 0.4);
+  border-radius: 8px;
+  padding: 8px;
+  cursor: pointer;
+  z-index: 60;
+}
+
+.hamburgerLine {
+  width: 100%;
+  height: 2px;
+  background: #00f0ff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+  box-shadow: 0 0 6px rgba(0, 240, 255, 0.7);
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(1) {
+  transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(2) {
+  opacity: 0;
+}
+
+.hamburgerOpen .hamburgerLine:nth-child(3) {
+  transform: rotate(-45deg) translate(5px, -5px);
+}
+
+/* Mobile Dropdown Menu */
+.mobileMenu {
+  display: none;
+}
+
+/* ==========================================================================
+   HERO MAIN BODY GRID
+   ========================================================================== */
+
+.heroBody {
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  align-items: center;
+  gap: clamp(1rem, 2.5vw, 2.5rem);
+  padding-top: clamp(0.4rem, 1.2vh, 1.2rem);
+  padding-bottom: clamp(0.4rem, 1.2vh, 1.2rem);
+  flex: 1;
+  min-height: 0;
+  position: relative;
+}
+
+/* LEFT COLUMN - CONTENT */
+.heroLeft {
+  display: flex;
+  flex-direction: column;
+  z-index: 5;
+}
+
+/* Eyebrow Category Tag */
+.eyebrow {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(0.4rem, 0.7vw, 0.75rem);
+  font-family: var(--font-tech);
+  font-size: clamp(0.75rem, min(0.9vw, 1.2vh), 0.92rem);
+  font-weight: 600;
+  letter-spacing: clamp(0.18em, 0.25vw, 0.28em);
+  color: #7b9abf;
+  text-transform: uppercase;
+  margin-bottom: clamp(0.4rem, 1.2vh, 1rem);
+}
+
+.eyebrowDot {
+  display: inline-block;
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background-color: #00e5ff;
+  box-shadow: 0 0 8px #00e5ff, 0 0 14px #00e5ff;
+}
+
+/* Main Heading */
+.title {
+  font-family: var(--font-display);
+  font-size: clamp(1.9rem, min(3.8vw, 5.8vh), 4.4rem);
+  font-weight: 900;
+  line-height: 1.06;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  margin-bottom: clamp(0.4rem, 1.4vh, 1.1rem);
+}
+
+.titleWhite {
+  display: block;
+  color: #ffffff;
+  text-shadow: 0 0 25px rgba(255, 255, 255, 0.35);
+}
+
+.titleGradient {
+  display: block;
+  background: linear-gradient(135deg, #00f0ff 0%, #0099ff 50%, #00d2ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  filter: drop-shadow(0 0 20px rgba(0, 180, 255, 0.45));
+}
+
+/* Description / Subtitle */
+.subtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.85rem, min(1.05vw, 1.5vh), 1.08rem);
+  font-weight: 400;
+  color: #a4bad4;
+  line-height: 1.5;
+  max-width: 540px;
+  margin-bottom: clamp(0.6rem, 1.8vh, 1.6rem);
+}
+
+/* CTA Buttons Row */
+.ctaGroup {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: clamp(0.7rem, 1.2vw, 1.25rem);
+  margin-bottom: clamp(0.6rem, 2vh, 2rem);
+}
+
+/* Primary Button: "Ver Projetos" */
+.btnPrimary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: clamp(0.65rem, 1.2vh, 0.95rem) clamp(1.2rem, 1.6vw, 1.85rem);
+  background: linear-gradient(135deg, #0084ff 0%, #00d2ff 100%);
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: clamp(0.86rem, 1vw, 1.02rem);
+  font-weight: 700;
+  letter-spacing: 0.03em;
+  box-shadow:
+    0 0 25px rgba(0, 210, 255, 0.65),
+    0 0 60px rgba(0, 120, 255, 0.35),
+    inset 0 1px 1px rgba(255, 255, 255, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  position: relative;
+  overflow: hidden;
+}
+
+.btnPrimary:hover {
+  transform: translateY(-2px);
+  box-shadow:
+    0 0 35px rgba(0, 240, 255, 0.85),
+    0 0 80px rgba(0, 150, 255, 0.5);
+}
+
+.btnIconCircle {
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: #ffffff;
+  color: #0066cc;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.8);
+}
+
+.btnArrowRight {
+  font-size: 1.15rem;
+  transition: transform 0.25s ease;
+}
+
+.btnPrimary:hover .btnArrowRight {
+  transform: translateX(4px);
+}
+
+/* Secondary Button: "Conhecer Serviços" */
+.btnSecondary {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.85rem;
+  padding: clamp(0.65rem, 1.2vh, 0.95rem) clamp(1.2rem, 1.6vw, 1.85rem);
+  background: rgba(0, 20, 45, 0.55);
+  border: 1px solid #00c8ff;
+  border-radius: 9999px;
+  color: #ffffff;
+  font-family: var(--font-body);
+  font-size: clamp(0.86rem, 1vw, 1.02rem);
+  font-weight: 600;
+  letter-spacing: 0.02em;
+  box-shadow: 0 0 18px rgba(0, 180, 255, 0.25), inset 0 0 15px rgba(0, 180, 255, 0.15);
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+  backdrop-filter: blur(8px);
+}
+
+.btnSecondary:hover {
+  transform: translateY(-2px);
+  border-color: #00f0ff;
+  box-shadow: 0 0 25px rgba(0, 240, 255, 0.5), inset 0 0 20px rgba(0, 220, 255, 0.25);
+  background: rgba(0, 30, 65, 0.7);
+}
+
+.gearIcon {
+  color: #00d2ff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.4s ease;
+}
+
+.btnSecondary:hover .gearIcon {
+  transform: rotate(45deg);
+}
+
+/* 4 Feature Badges Row */
+.featuresRow {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: clamp(0.5rem, 1vw, 1.2rem);
+  padding-top: clamp(0.2rem, 0.8vh, 0.8rem);
+}
+
+.featureItem {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.45rem, 0.8vw, 0.85rem);
+}
+
+.featureIconBadge {
+  flex-shrink: 0;
+  width: clamp(34px, 4.2vh, 44px);
+  height: clamp(34px, 4.2vh, 44px);
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 200, 255, 0.22) 0%, rgba(0, 60, 130, 0.4) 100%);
+  border: 1px solid #00d2ff;
+  box-shadow: 0 0 14px rgba(0, 210, 255, 0.45), inset 0 0 10px rgba(0, 210, 255, 0.2);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #00f0ff;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.featureItem:hover .featureIconBadge {
+  transform: scale(1.08);
+  box-shadow: 0 0 22px rgba(0, 240, 255, 0.75);
+}
+
+.featureTexts {
+  display: flex;
+  flex-direction: column;
+}
+
+.featureTitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.8rem, min(0.95vw, 1.3vh), 0.95rem);
+  font-weight: 700;
+  color: #ffffff;
+  line-height: 1.2;
+}
+
+.featureSubtitle {
+  font-family: var(--font-body);
+  font-size: clamp(0.7rem, min(0.82vw, 1.1vh), 0.82rem);
+  font-weight: 400;
+  color: #8da4be;
+  line-height: 1.25;
+}
+
+/* ==========================================================================
+   RIGHT COLUMN - HOLOGRAPHIC CYBER PORTAL STRUCTURE (NO IMAGES)
+   ========================================================================== */
+
+.heroRight {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 0;
+  height: 100%;
+  max-height: 100%;
+  z-index: 4;
+}
+
+/* Portal Main Frame */
+.portalStructure {
+  position: relative;
+  width: 100%;
+  max-width: min(560px, 44vw, calc(100vh - 210px));
+  max-height: min(560px, 44vw, calc(100vh - 210px));
+  aspect-ratio: 1 / 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Radial Glow Behind Portal */
+.portalBackdropGlow {
+  position: absolute;
+  inset: -10%;
+  border-radius: 50%;
+  background: radial-gradient(circle, rgba(0, 195, 255, 0.25) 0%, rgba(0, 120, 255, 0.12) 45%, transparent 75%);
+  filter: blur(50px);
+  animation: portalPulse 6s ease-in-out infinite alternate;
+}
+
+/* SVG Cyber Portal Gateway */
+.portalSvg {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  inset: 0;
+  overflow: visible;
+}
+
+/* Rotating dashed rings */
+.rotateClockwise {
+  transform-origin: center;
+  animation: spinClockwise 35s linear infinite;
+}
+
+.rotateCounterClockwise {
+  transform-origin: center;
+  animation: spinCounterClockwise 25s linear infinite;
+}
+
+.rotateSlow {
+  transform-origin: center;
+  animation: spinClockwise 60s linear infinite;
+}
+
+/* Center Interactive Slot for 3D or Hologram */
+.portalCenterSlot {
+  position: absolute;
+  width: 64%;
+  height: 64%;
+  border-radius: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: radial-gradient(circle, rgba(0, 25, 60, 0.2) 0%, rgba(0, 0, 0, 0.4) 75%);
+  border: 1px solid rgba(0, 220, 255, 0.35);
+  box-shadow: inset 0 0 40px rgba(0, 180, 255, 0.3), 0 0 30px rgba(0, 160, 255, 0.2);
+  overflow: hidden;
+  text-align: center;
+  padding: 1.5rem;
+  backdrop-filter: blur(4px);
+}
+
+.portalCenterSlot::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(0, 240, 255, 0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0, 240, 255, 0.1) 1px, transparent 1px);
+  background-size: 20px 20px;
+  mask-image: radial-gradient(circle, rgba(0, 0, 0, 1) 30%, rgba(0, 0, 0, 0) 80%);
+  pointer-events: none;
+}
+
+.portalStatusTag {
+  font-family: var(--font-tech);
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.28em;
+  color: #00f0ff;
+  text-transform: uppercase;
+  margin-bottom: 0.6rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  text-shadow: 0 0 10px rgba(0, 240, 255, 0.8);
+}
+
+.portalStatusDot {
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: #00f0ff;
+  box-shadow: 0 0 10px #00f0ff;
+  animation: blink 1.6s ease-in-out infinite;
+}
+
+.portalCenterTitle {
+  font-family: var(--font-display);
+  font-size: 1.2rem;
+  font-weight: 800;
+  letter-spacing: 0.15em;
+  color: #ffffff;
+  margin-bottom: 0.4rem;
+  text-transform: uppercase;
+}
+
+.portalCenterSub {
+  font-family: var(--font-body);
+  font-size: 0.78rem;
+  color: #8da6c5;
+  letter-spacing: 0.05em;
+  max-width: 220px;
+}
+
+.portalTelemetry {
+  position: absolute;
+  bottom: 10%;
+  display: flex;
+  gap: clamp(0.6rem, 1vw, 1rem);
+  font-family: var(--font-tech);
+  font-size: clamp(0.65rem, 0.9vh, 0.75rem);
+  letter-spacing: 0.18em;
+  color: rgba(0, 240, 255, 0.7);
+}
+
+/* ==========================================================================
+   BOTTOM BAR (SCROLL INDICATOR & SOCIAL ICONS)
+   ========================================================================== */
+
+.bottomBar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding-top: clamp(0.5rem, 1.4vh, 1.2rem);
+  padding-bottom: clamp(0.6rem, 1.6vh, 1.5rem);
+  border-top: 1px solid rgba(0, 180, 255, 0.12);
+  position: relative;
+  z-index: 20;
+  flex-shrink: 0;
+}
+
+/* Left: Scroll Indicator */
+.scrollIndicator {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.6rem, 1vw, 1.1rem);
+}
+
+.mouseIcon {
+  width: clamp(18px, 2.4vh, 22px);
+  height: clamp(28px, 3.8vh, 36px);
+  border: 2px solid rgba(0, 220, 255, 0.75);
+  border-radius: 12px;
+  position: relative;
+  box-shadow: 0 0 12px rgba(0, 210, 255, 0.35);
+  display: flex;
+  justify-content: center;
+  padding-top: 5px;
+}
+
+.mouseWheel {
+  width: 3px;
+  height: 7px;
+  background-color: #00f0ff;
+  border-radius: 2px;
+  box-shadow: 0 0 8px #00f0ff;
+  animation: mouseScroll 2s cubic-bezier(0.65, 0, 0.35, 1) infinite;
+}
+
+.scrollTextWrapper {
+  display: flex;
+  align-items: center;
+  gap: 0.6rem;
+}
+
+.scrollText {
+  font-family: var(--font-tech);
+  font-size: clamp(0.76rem, 1vw, 0.88rem);
+  font-weight: 600;
+  letter-spacing: 0.24em;
+  color: #8fa6c2;
+  text-transform: uppercase;
+}
+
+.scrollChevrons {
+  display: flex;
+  flex-direction: column;
+  gap: -2px;
+  color: #00d2ff;
+  animation: chevronBounce 1.8s ease-in-out infinite;
+}
+
+/* Right: Social Media Icons */
+.socialRow {
+  display: flex;
+  align-items: center;
+  gap: clamp(0.5rem, 0.8vw, 0.9rem);
+}
+
+.socialBtn {
+  width: clamp(32px, 3.8vh, 38px);
+  height: clamp(32px, 3.8vh, 38px);
+  border-radius: 50%;
+  background: rgba(0, 30, 65, 0.35);
+  border: 1px solid rgba(0, 200, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #a1b8d4;
+  transition: all 0.25s ease;
+  box-shadow: 0 0 10px rgba(0, 180, 255, 0.12);
+}
+
+.socialBtn:hover {
+  transform: translateY(-2px);
+  color: #ffffff;
+  border-color: #00f0ff;
+  background: rgba(0, 60, 130, 0.5);
+  box-shadow: 0 0 16px rgba(0, 240, 255, 0.6);
+}
+
+/* ==========================================================================
+   KEYFRAME ANIMATIONS
+   ========================================================================== */
+
+@keyframes spinClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@keyframes spinCounterClockwise {
+  from {
+    transform: rotate(0deg);
+  }
+
+  to {
+    transform: rotate(-360deg);
+  }
+}
+
+@keyframes portalPulse {
+  0% {
+    transform: scale(0.96);
+    opacity: 0.7;
+  }
+
+  100% {
+    transform: scale(1.04);
+    opacity: 1;
+  }
+}
+
+@keyframes mouseScroll {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  60% {
+    transform: translateY(12px);
+    opacity: 0.1;
+  }
+
+  100% {
+    transform: translateY(0);
+    opacity: 0;
+  }
+}
+
+@keyframes chevronBounce {
+
+  0%,
+  100% {
+    transform: translateY(0);
+  }
+
+  50% {
+    transform: translateY(4px);
+  }
+}
+
+@keyframes blink {
+
+  0%,
+  100% {
+    opacity: 1;
+  }
+
+  50% {
+    opacity: 0.3;
+  }
+}
+
+/* ==========================================================================
+   RESPONSIVENESS (MOBILE, TABLET & SMALL SCREENS)
+   ========================================================================== */
+
+/* Height-constrained displays (e.g. 768p/800p laptops, browser devtools open) */
+@media (max-height: 780px) and (min-width: 861px) {
+  .heroBody {
+    gap: 1.2rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  .featuresRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.6rem 1rem;
+  }
+  .portalStructure {
+    max-width: min(440px, calc(100vh - 170px));
+    max-height: min(440px, calc(100vh - 170px));
+  }
+}
+
+@media (max-height: 650px) and (min-width: 861px) {
+  .header {
+    padding-top: 0.5rem;
+    padding-bottom: 0.5rem;
+  }
+  .bottomBar {
+    padding-top: 0.4rem;
+    padding-bottom: 0.4rem;
+  }
+  .heroBody {
+    gap: 0.8rem;
+    padding-top: 0.2rem;
+    padding-bottom: 0.2rem;
+  }
+  .title {
+    font-size: clamp(1.6rem, 4.2vh, 2.4rem);
+    margin-bottom: 0.35rem;
+  }
+  .subtitle {
+    margin-bottom: 0.5rem;
+    font-size: 0.82rem;
+    line-height: 1.4;
+  }
+  .ctaGroup {
+    margin-bottom: 0.5rem;
+    gap: 0.6rem;
+  }
+  .featuresRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.4rem 0.8rem;
+  }
+  .featureIconBadge {
+    width: 32px;
+    height: 32px;
+  }
+  .portalStructure {
+    max-width: min(340px, calc(100vh - 140px));
+    max-height: min(340px, calc(100vh - 140px));
+  }
+}
+
+/* Tablet & Laptop (max-width: 1100px) */
+@media (max-width: 1100px) {
+  .heroBody {
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 1.5rem;
+  }
+
+  .navMenu {
+    gap: 1.5rem;
+  }
+
+  .featuresRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.2rem;
+  }
+}
+
+/* Tablet Portrait & Mobile (max-width: 860px) */
+@media (max-width: 860px) {
+  .scrollTrack {
+    height: auto;
+    min-height: 100vh;
+  }
+
+  .heroWrapper {
+    position: relative;
+    height: auto;
+    min-height: 100vh;
+    min-height: 100dvh;
+    overflow-y: visible;
+    pointer-events: auto;
+  }
+
+  .container {
+    height: auto;
+    min-height: 100vh;
+    padding: 0 1.5rem;
+  }
+
+  .header {
+    padding-top: 1.2rem;
+    padding-bottom: 1.2rem;
+  }
+
+  .navMenu,
+  .headerCta {
+    display: none;
+  }
+
+  .hamburgerBtn {
+    display: flex;
+  }
+
+  /* Mobile Overlay Menu */
+  .mobileMenu {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    top: 75px;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.96);
+    backdrop-filter: blur(20px);
+    padding: 2rem 1.5rem;
+    gap: 1.8rem;
+    z-index: 100;
+    border-top: 1px solid rgba(0, 220, 255, 0.2);
+    overflow-y: auto;
+    animation: fadeInMenu 0.25s ease-out;
+  }
+
+  .mobileNavLink {
+    font-family: var(--font-tech);
+    font-size: 1.25rem;
+    font-weight: 600;
+    letter-spacing: 0.15em;
+    color: #a4bedc;
+    padding: 0.6rem 0;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+  }
+
+  .mobileNavLinkActive {
+    color: #00f0ff;
+    border-bottom: 1px solid #00f0ff;
+    text-shadow: 0 0 10px rgba(0, 240, 255, 0.7);
+  }
+
+  .mobileCta {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.8rem;
+    padding: 0.9rem 1.6rem;
+    background: linear-gradient(135deg, #0084ff 0%, #00d2ff 100%);
+    border-radius: 9999px;
+    color: #ffffff;
+    font-family: var(--font-body);
+    font-size: 1rem;
+    font-weight: 700;
+    box-shadow: 0 0 25px rgba(0, 200, 255, 0.5);
+    margin-top: 1rem;
+  }
+
+  /* Hero Content Layout on Mobile */
+  .heroBody {
+    grid-template-columns: 1fr;
+    padding-top: 1.5rem;
+    padding-bottom: 2rem;
+    gap: 2.2rem;
+    flex: none;
+  }
+
+  .heroLeft {
+    order: 1;
+    text-align: left;
+  }
+
+  .heroRight {
+    order: 2;
+    min-height: 320px;
+    margin: 0.5rem 0;
+  }
+
+  .portalStructure {
+    max-width: 340px;
+    max-height: 340px;
+  }
+
+  .title {
+    font-size: clamp(2rem, 7.5vw, 3rem);
+  }
+
+  .ctaGroup {
+    flex-direction: column;
+    align-items: stretch;
+    gap: 0.9rem;
+    margin-bottom: 2rem;
+  }
+
+  .btnPrimary,
+  .btnSecondary {
+    justify-content: center;
+    width: 100%;
+    padding: 0.85rem 1.4rem;
+  }
+
+  .featuresRow {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1.1rem;
+  }
+
+  .bottomBar {
+    flex-direction: column;
+    gap: 1.3rem;
+    align-items: center;
+    text-align: center;
+    padding-top: 1.2rem;
+    padding-bottom: 2.2rem;
+  }
+}
+
+/* Small Smartphone (max-width: 520px) */
+@media (max-width: 520px) {
+  .container {
+    padding: 0 1.1rem;
+  }
+
+  .logoBrand {
+    font-size: 1.15rem;
+    letter-spacing: 0.16em;
+  }
+
+  .logoTagline {
+    font-size: 0.65rem;
+    letter-spacing: 0.28em;
+  }
+
+  .eyebrow {
+    font-size: 0.78rem;
+    letter-spacing: 0.18em;
+    gap: 0.5rem;
+  }
+
+  .title {
+    font-size: clamp(1.85rem, 8.5vw, 2.6rem);
+  }
+
+  .subtitle {
+    font-size: 0.95rem;
+  }
+
+  .featuresRow {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+  .portalStructure {
+    max-width: 300px;
+  }
+
+  .portalCenterSlot {
+    width: 68%;
+    height: 68%;
+    padding: 1rem;
+  }
+
+  .portalCenterTitle {
+    font-size: 0.95rem;
+  }
+
+  .portalCenterSub {
+    font-size: 0.7rem;
+  }
+}
+
+@keyframes fadeInMenu {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
